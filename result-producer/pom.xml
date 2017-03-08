@@ -19,7 +19,7 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <hollow.version>2.2.3</hollow.version>
+        <hollow.version>2.2.5</hollow.version>
         <guava.version>21.0</guava.version>
         <common.version>0.1.0</common.version>
     </properties>

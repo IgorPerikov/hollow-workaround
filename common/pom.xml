@@ -12,7 +12,22 @@
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hollow.version>2.2.5</hollow.version>
+        <guava.version>21.0</guava.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.netflix.hollow</groupId>
+            <artifactId>hollow</artifactId>
+            <version>${hollow.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
