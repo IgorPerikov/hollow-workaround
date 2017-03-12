@@ -4,32 +4,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.clayman.hollow</groupId>
-    <artifactId>user-data-consumer</artifactId>
+    <groupId>org.clayman.scoring</groupId>
+    <artifactId>processor</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
-
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.2.RELEASE</version>
-        <relativePath/>
-    </parent>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hollow.version>2.2.5</hollow.version>
         <guava.version>21.0</guava.version>
-        <common.version>0.1.0</common.version>
+        <common.version>${version}</common.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
         <dependency>
             <groupId>com.netflix.hollow</groupId>
             <artifactId>hollow</artifactId>
@@ -43,7 +31,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.clayman.hollow</groupId>
+            <groupId>org.clayman.scoring</groupId>
             <artifactId>common</artifactId>
             <version>${common.version}</version>
         </dependency>
@@ -52,8 +40,21 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
             </plugin>
         </plugins>
     </build>

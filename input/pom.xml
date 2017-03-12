@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.clayman.hollow</groupId>
-    <artifactId>result-producer</artifactId>
+    <groupId>org.clayman.scoring</groupId>
+    <artifactId>input</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
 
@@ -21,7 +21,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hollow.version>2.2.5</hollow.version>
         <guava.version>21.0</guava.version>
-        <common.version>0.1.0</common.version>
+        <common.version>${version}</common.version>
     </properties>
 
     <dependencies>
@@ -43,7 +43,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.clayman.hollow</groupId>
+            <groupId>org.clayman.scoring</groupId>
             <artifactId>common</artifactId>
             <version>${common.version}</version>
         </dependency>

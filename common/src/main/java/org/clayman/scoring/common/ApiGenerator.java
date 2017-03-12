@@ -1,4 +1,4 @@
-package org.clayman.hollow.common;
+package org.clayman.scoring.common;
 
 import com.google.common.collect.ImmutableSet;
 import com.google.common.reflect.ClassPath;
@@ -24,11 +24,11 @@ public class ApiGenerator {
         HollowAPIGenerator generator =
                 new HollowAPIGenerator(
                         "APIfacade",
-                        "org.clayman.hollow.producer.api",
+                        "org.clayman.hollow.input.api",
                         writeEngine
                 );
 
-        String folderPath = "/home/baltor/IdeaProjects/hollow/result-producer/src/main/java/org/clayman/hollow/producer/api";
+        String folderPath = "/home/baltor/IdeaProjects/hollow/result-input/src/main/java/org/clayman/hollow/input/api";
 
         File apiCodeFolder = new File(folderPath);
 
