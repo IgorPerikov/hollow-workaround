@@ -1,3 +1,3 @@
-Hollow-workaround
+online-scoring-platform
 ----
-Test workaround for netflix hollow cache
+online-scoring-platform
