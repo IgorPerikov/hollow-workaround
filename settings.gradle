@@ -1,3 +1,5 @@
 rootProject.name = 'online-scoring-platform'
 include 'common'
-
+include 'input'
+include 'output'
+include 'calculator'
