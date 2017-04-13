@@ -1,5 +1,4 @@
 package org.clayman.scoring.domain;
 
-public class MatchResult {
-
+public class AchievementCondition {
 }
