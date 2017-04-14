@@ -1,14 +1,28 @@
-buildscript {
-
-}
-
-group 'org.clayman.scoring'
-version '0.1'
-
 repositories {
     mavenCentral()
 }
 
-dependencies {
+allprojects {
+    group 'org.clayman.scoring'
+    version '0.1'
+}
 
+subprojects {
+    apply plugin: 'java'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+
+    ext {
+        guavaVersion = '21.0'
+    }
+
+    dependencies {
+        compile "com.google.guava:guava:${guavaVersion}"
+    }
 }
