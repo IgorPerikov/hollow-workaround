@@ -1,7 +1,11 @@
 package org.clayman.scoring.domain.match;
 
-public abstract class PlayerStats {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public abstract class PlayerStats {
     private Integer kills;
 
     private Integer killsWithEnforcer;

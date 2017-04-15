@@ -20,9 +20,12 @@ subprojects {
 
     ext {
         guavaVersion = '21.0'
+        lombokVersion = '1.16.16'
     }
 
     dependencies {
         compile "com.google.guava:guava:${guavaVersion}"
+
+        compileOnly "org.projectlombok:lombok:${lombokVersion}"
     }
 }

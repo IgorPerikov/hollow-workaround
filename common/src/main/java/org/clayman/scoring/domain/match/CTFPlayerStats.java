@@ -1,7 +1,11 @@
 package org.clayman.scoring.domain.match;
 
-public class CTFPlayerStats extends PlayerStats {
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
+public class CTFPlayerStats extends PlayerStats {
     private Integer flagBringerKills;
     private Integer flagsReturnedHome;
     private Integer flagsCaptured;
