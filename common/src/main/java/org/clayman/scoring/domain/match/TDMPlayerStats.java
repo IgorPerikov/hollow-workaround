@@ -1,10 +1,8 @@
 package org.clayman.scoring.domain.match;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class TDMPlayerStats extends PlayerStats {
     private Integer assists;
 }

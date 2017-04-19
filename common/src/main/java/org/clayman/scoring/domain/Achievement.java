@@ -1,13 +1,11 @@
 package org.clayman.scoring.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.Map;
 import java.util.UUID;
 
-@Getter
-@Setter
+@Data
 public class Achievement {
     private UUID id;
     private AchievementCondition achievementCondition;

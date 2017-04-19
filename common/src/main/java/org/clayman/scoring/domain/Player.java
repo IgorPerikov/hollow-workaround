@@ -1,12 +1,10 @@
 package org.clayman.scoring.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.UUID;
 
-@Getter
-@Setter
+@Data
 public class Player {
     private UUID id;
     private String nickname;
