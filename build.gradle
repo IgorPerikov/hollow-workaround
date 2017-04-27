@@ -23,6 +23,7 @@ subprojects {
         rxJavaVersion = '2.0.8'
 
         lombokVersion = '1.16.16'
+        hollowVersion = '2.4.2'
     }
 
     dependencies {

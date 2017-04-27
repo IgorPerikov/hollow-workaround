@@ -1,4 +1,4 @@
-package org.clayman.scoring.domain;
+package org.clayman.scoring.common.domain;
 
 import lombok.Data;
 

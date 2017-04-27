@@ -1,3 +1,4 @@
 dependencies {
+    compile "com.netflix.hollow:hollow:${hollowVersion}"
     compile project(':common')
 }
