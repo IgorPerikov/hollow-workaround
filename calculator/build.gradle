@@ -1,4 +1,5 @@
 dependencies {
+    compile "info.archinnov:achilles-core:${achillesVersion}"
     compile "com.netflix.hollow:hollow:${hollowVersion}"
     compile project(':common')
 }

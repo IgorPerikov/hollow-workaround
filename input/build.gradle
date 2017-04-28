@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'org.springframework.boot'
 
 dependencies {
-    compile project(':common')
-
+    compile "info.archinnov:achilles-core:${achillesVersion}"
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile project(':common')
 }

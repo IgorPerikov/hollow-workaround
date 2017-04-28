@@ -22,6 +22,8 @@ subprojects {
         guavaVersion = '21.0'
         rxJavaVersion = '2.0.8'
 
+        achillesVersion = '5.2.1'
+
         lombokVersion = '1.16.16'
         hollowVersion = '2.4.2'
     }
