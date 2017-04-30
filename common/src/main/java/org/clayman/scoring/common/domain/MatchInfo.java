@@ -8,12 +8,7 @@ import java.util.UUID;
 
 @Data
 public class MatchInfo {
-    private UUID id;
-
-    private Map<UUID, PlayerStats> playerStats;
-
+    private UUID matchId;
     private Instant startTime;
-    private Instant endTime;
-    private MatchType matchType;
-    private String mapName;
+    private AdditionalMatchInfo additionalMatchInfo;
 }

@@ -6,7 +6,7 @@ import java.util.UUID;
 
 @Data
 public class Player {
-    private UUID id;
+    private UUID playerId;
     private String nickname;
-    private Region region;
+    private Double ratingPoints;
 }
