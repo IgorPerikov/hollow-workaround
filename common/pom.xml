@@ -14,10 +14,10 @@
                 <version>0.1.1</version>
                 <configuration>
                     <packagesToScan>
-                        <param>org.clayman.scoring.common.domain</param>
+                        <param>org.clayman.scoring.common.hollow</param>
                     </packagesToScan>
                     <apiClassName>Api</apiClassName>
-                    <apiPackageName>org.clayman.scoring.generated</apiPackageName>
+                    <apiPackageName>org.clayman.scoring.common.generated</apiPackageName>
                 </configuration>
             </plugin>
         </plugins>

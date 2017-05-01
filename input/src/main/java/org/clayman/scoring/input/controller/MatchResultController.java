@@ -1,6 +1,6 @@
 package org.clayman.scoring.input.controller;
 
-import org.clayman.scoring.common.domain.MatchInfo;
+import org.clayman.scoring.common.cassandra.MatchInfoByPlayerId;
 import org.clayman.scoring.input.service.MatchInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,8 +16,8 @@ public class MatchResultController {
     private MatchInfoService matchInfoService;
 
     @PostMapping("/match-result")
-    public ResponseEntity saveResult(@RequestBody MatchInfo matchInfo) {
-        matchInfoService.save(matchInfo);
+    public ResponseEntity saveResult(@RequestBody MatchInfoByPlayerId matchInfoByPlayerId) {
+        matchInfoService.save(matchInfoByPlayerId);
         return new ResponseEntity(HttpStatus.CREATED);
     }
 }

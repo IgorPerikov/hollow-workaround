@@ -1,14 +1,17 @@
-package org.clayman.scoring.common.domain;
+package org.clayman.scoring.common.cassandra;
 
 import lombok.Data;
 
+import java.time.Instant;
 import java.util.UUID;
 
 @Data
-public class PlayerStats {
+public class MatchInfoByPlayerId {
     private UUID playerId;
     private UUID matchId;
     private Integer ratingPointsGained;
     private Integer kills;
     private Integer deaths;
+    private Instant startTime;
+    private AdditionalMatchInfoUDT additionalInfo;
 }

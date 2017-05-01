@@ -1,4 +1,4 @@
-package org.clayman.scoring.common.domain;
+package org.clayman.scoring.common;
 
 public enum MatchType {
     DM,
