@@ -1,4 +1,4 @@
-CREATE MATERIALIZED VIEW online_scoring.matches_by_player_id
+CREATE MATERIALIZED VIEW online_scoring.players_stats_by_player_id
     AS SELECT *
     FROM online_scoring.players_stats_by_match_id
     WHERE match_id IS NOT NULL AND player_id IS NOT NULL AND start_time IS NOT NULL

@@ -1,7 +1,7 @@
 CREATE TABLE online_scoring.players_stats_by_match_id (
     match_id uuid,
     player_id uuid,
-    rating_points int,
+    rating_points_gained int,
     kills int,
     deaths int,
     start_time timestamp,

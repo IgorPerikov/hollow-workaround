@@ -10,5 +10,9 @@ repositories {
 }
 
 dependencies {
+    compile "com.datastax.cassandra:cassandra-driver-core:${cassandraDriverVersion}"
+    compile "com.datastax.cassandra:cassandra-driver-extras:${cassandraDriverVersion}"
+    compile "com.datastax.cassandra:cassandra-driver-mapping:${cassandraDriverVersion}"
+
     compile "com.netflix.hollow:hollow:${hollowVersion}"
 }

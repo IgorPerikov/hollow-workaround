@@ -20,12 +20,12 @@ subprojects {
 
     ext {
         guavaVersion = '21.0'
-        rxJavaVersion = '2.0.8'
+        rxJavaVersion = '2.0.9'
 
-        achillesVersion = '5.2.1'
+        cassandraDriverVersion = '3.2.0'
 
         lombokVersion = '1.16.16'
-        hollowVersion = '2.4.2'
+        hollowVersion = '2.5.0'
     }
 
     dependencies {
