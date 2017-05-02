@@ -10,8 +10,8 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Data
-@Table(keyspace = "online_scoring", name = "player_info_by_player_id")
-public class PlayerInfoByPlayerId {
+@Table(keyspace = "online_scoring", name = "player_profile_by_player_id")
+public class PlayerProfileByPlayerId {
 
     @PartitionKey
     @Column(name = "player_id")

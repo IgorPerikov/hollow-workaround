@@ -7,7 +7,7 @@ import java.time.Instant;
 import java.util.UUID;
 
 @Data
-@Table(keyspace = "online_scoring", name = "matches_by_player_id")
+@Table(keyspace = "online_scoring", name = "players_stats_by_player_id")
 public class PlayerStatsByPlayerId {
 
     @PartitionKey
