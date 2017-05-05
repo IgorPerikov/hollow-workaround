@@ -19,4 +19,8 @@ public class PlayerByNickname {
     @ClusteringColumn
     @Column(name = "player_id")
     private UUID playerId;
+
+    @ClusteringColumn
+    @Column(name = "stub")
+    private Integer stub;
 }

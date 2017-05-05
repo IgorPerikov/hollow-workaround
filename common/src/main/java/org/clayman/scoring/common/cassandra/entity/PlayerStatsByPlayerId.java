@@ -15,11 +15,15 @@ public class PlayerStatsByPlayerId {
     private UUID playerId;
 
     @ClusteringColumn
-    @Column(name = "rating_points")
-    private Integer ratingPoints;
+    @Column(name = "start_time")
+    private Instant startTime;
 
+    @ClusteringColumn
     @Column(name = "match_id")
     private UUID matchId;
+
+    @Column(name = "rating_points")
+    private Integer ratingPoints;
 
     @Column(name = "kills")
     private Integer kills;
@@ -27,10 +31,7 @@ public class PlayerStatsByPlayerId {
     @Column(name = "deaths")
     private Integer deaths;
 
-    @Column(name = "start_time")
-    private Instant startTime;
-
-    @Frozen // TODO:
+    @Frozen // TODO: figure out should I place it?
     @Field(name = "additional_info")
     private AdditionalMatchInfoUDT additionalInfo;
 }

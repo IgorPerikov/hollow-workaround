@@ -30,7 +30,7 @@ public class PlayerStatsByMatchId {
     @Column(name = "start_time")
     private Instant startTime;
 
-    @Frozen // TODO:
+    @Frozen // TODO: figure out should I place it?
     @Field(name = "additional_info")
     private AdditionalMatchInfoUDT additionalInfo;
 }
