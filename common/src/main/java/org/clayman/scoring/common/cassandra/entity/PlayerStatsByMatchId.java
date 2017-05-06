@@ -1,12 +1,16 @@
 package org.clayman.scoring.common.cassandra.entity;
 
 import com.datastax.driver.mapping.annotations.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.UUID;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(keyspace = "online_scoring", name = "players_stats_by_match_id")
 public class PlayerStatsByMatchId {
 
@@ -31,6 +35,6 @@ public class PlayerStatsByMatchId {
     private Instant startTime;
 
     @Frozen // TODO: figure out should I place it?
-    @Field(name = "additional_info")
+    @Column(name = "additional_info")
     private AdditionalMatchInfoUDT additionalInfo;
 }

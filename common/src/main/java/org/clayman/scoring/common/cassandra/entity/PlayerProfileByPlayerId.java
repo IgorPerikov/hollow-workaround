@@ -12,7 +12,7 @@ import java.util.UUID;
 @Table(keyspace = "online_scoring", name = "player_profile_by_player_id")
 public class PlayerProfileByPlayerId {
 
-    private static final Integer STUB_VALUE = 0;
+    public static final Integer STUB_VALUE = 0;
 
     @PartitionKey
     @Column(name = "player_id")

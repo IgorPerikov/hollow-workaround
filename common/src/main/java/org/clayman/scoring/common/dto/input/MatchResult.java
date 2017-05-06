@@ -18,7 +18,7 @@ public class MatchResult {
     private List<PlayerStats> playersStats;
 
     @Data
-    static class PlayerStats {
+    public static class PlayerStats {
         private UUID playerId;
         private Integer ratingPoints;
         private Integer kills;
