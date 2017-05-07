@@ -12,15 +12,15 @@ import java.util.UUID;
 @Table(keyspace = "online_scoring", name = "top_players")
 public class TopRatingPlayer {
 
-    @PartitionKey
+    @PartitionKey(0)
     @Column(name = "stub")
     private Integer stub;
 
-    @ClusteringColumn
+    @ClusteringColumn(0)
     @Column(name = "rating_points")
     private Integer ratingPoints;
 
-    @ClusteringColumn
+    @ClusteringColumn(1)
     @Column(name = "player_id")
     private UUID playerId;
 

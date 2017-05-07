@@ -6,13 +6,14 @@ import com.datastax.driver.core.Statement;
 import com.datastax.driver.core.TableMetadata;
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.mapping.Mapper;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.clayman.scoring.common.cassandra.entity.PlayerProfileByPlayerId;
 import org.clayman.scoring.common.cassandra.entity.TopRatingPlayer;
 
 import java.util.List;
 
-@Data
+@AllArgsConstructor
 public class TopRatingPlayersRepository {
 
     private static final Integer TOP_PLAYERS_LIMIT = 100;
@@ -24,7 +25,7 @@ public class TopRatingPlayersRepository {
         TableMetadata metadata = mapper.getTableMetadata();
 
         Statement statement = QueryBuilder.select()
-                .from(metadata)
+                .from("online_scoring", "top_players")
                 .where(QueryBuilder.eq("stub", PlayerProfileByPlayerId.STUB_VALUE))
                 .limit(TOP_PLAYERS_LIMIT);
 

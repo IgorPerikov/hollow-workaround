@@ -1,12 +1,10 @@
 package org.clayman.scoring.input.configuration;
 
-import com.datastax.driver.core.*;
-import com.datastax.driver.core.policies.*;
-import com.datastax.driver.extras.codecs.enums.EnumNameCodec;
-import com.datastax.driver.extras.codecs.jdk8.InstantCodec;
+import com.datastax.driver.core.Cluster;
+import com.datastax.driver.core.Session;
 import com.datastax.driver.mapping.Mapper;
 import com.datastax.driver.mapping.MappingManager;
-import org.clayman.scoring.common.MatchType;
+import org.clayman.scoring.common.cassandra.CassandraClusterBuilder;
 import org.clayman.scoring.common.cassandra.entity.PlayerProfileByPlayerId;
 import org.clayman.scoring.common.cassandra.entity.PlayerStatsByMatchId;
 import org.clayman.scoring.common.cassandra.repository.PlayerProfileByPlayerIdRepository;
@@ -19,21 +17,7 @@ public class CassandraConfiguration {
 
     @Bean(destroyMethod = "close")
     public Cluster cluster() {
-        CodecRegistry codecRegistry = new CodecRegistry();
-        codecRegistry.register(InstantCodec.instance);
-        codecRegistry.register(new EnumNameCodec<>(MatchType.class));
-
-        QueryOptions queryOptions = new QueryOptions();
-        queryOptions.setConsistencyLevel(ConsistencyLevel.QUORUM);
-
-        Cluster.Builder builder = Cluster.builder()
-                .addContactPoint("localhost")
-                .withCodecRegistry(codecRegistry)
-                .withCompression(ProtocolOptions.Compression.LZ4)
-                .withQueryOptions(queryOptions)
-                .withRetryPolicy(DowngradingConsistencyRetryPolicy.INSTANCE); // TODO
-
-        return builder.build();
+        return CassandraClusterBuilder.buildCluster();
     }
 
     @Bean(destroyMethod = "close")

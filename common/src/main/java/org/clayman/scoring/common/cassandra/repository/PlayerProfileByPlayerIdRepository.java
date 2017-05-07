@@ -6,12 +6,13 @@ import com.datastax.driver.core.Statement;
 import com.datastax.driver.core.TableMetadata;
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.mapping.Mapper;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.clayman.scoring.common.cassandra.entity.PlayerProfileByPlayerId;
 
 import java.util.UUID;
 
-@Data
+@AllArgsConstructor
 public class PlayerProfileByPlayerIdRepository {
 
     private final Session session;

@@ -18,7 +18,7 @@ public class PlayerStatsByPlayerId {
     @Column(name = "start_time")
     private Instant startTime;
 
-    @ClusteringColumn
+    @ClusteringColumn(1)
     @Column(name = "match_id")
     private UUID matchId;
 

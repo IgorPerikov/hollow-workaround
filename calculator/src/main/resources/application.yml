@@ -1,3 +1,9 @@
 spring:
   application:
     name: calculator-service
+  profiles:
+    active: development
+
+hollow:
+  snapshot:
+    folder: /tmp/snapshots

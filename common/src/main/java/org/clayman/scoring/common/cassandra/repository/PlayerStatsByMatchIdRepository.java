@@ -4,6 +4,7 @@ import com.datastax.driver.core.*;
 import com.datastax.driver.core.querybuilder.Batch;
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.mapping.Mapper;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.clayman.scoring.common.cassandra.entity.PlayerStatsByMatchId;
 
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-@Data
+@AllArgsConstructor
 public class PlayerStatsByMatchIdRepository {
 
     private final Session session;

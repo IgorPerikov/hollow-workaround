@@ -20,7 +20,7 @@ public class PlayerByNickname {
     @Column(name = "player_id")
     private UUID playerId;
 
-    @ClusteringColumn
+    @ClusteringColumn(1)
     @Column(name = "stub")
     private Integer stub;
 }
