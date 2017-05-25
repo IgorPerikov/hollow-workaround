@@ -11,7 +11,6 @@ import org.clayman.scoring.common.cassandra.entity.TopRatingPlayer;
 import org.clayman.scoring.common.cassandra.repository.HollowStateAnnouncementRepository;
 import org.clayman.scoring.common.cassandra.repository.PlayerProfileByPlayerIdRepository;
 import org.clayman.scoring.common.cassandra.repository.TopRatingPlayersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

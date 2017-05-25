@@ -1,16 +1,16 @@
 package org.clayman.scoring.common.cassandra.repository;
 
-import com.datastax.driver.core.*;
-import com.datastax.driver.core.querybuilder.Batch;
+import com.datastax.driver.core.ResultSet;
+import com.datastax.driver.core.Session;
+import com.datastax.driver.core.Statement;
+import com.datastax.driver.core.TableMetadata;
 import com.datastax.driver.core.querybuilder.QueryBuilder;
 import com.datastax.driver.mapping.Mapper;
 import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.clayman.scoring.common.cassandra.entity.PlayerStatsByMatchId;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @AllArgsConstructor
 public class PlayerStatsByMatchIdRepository {

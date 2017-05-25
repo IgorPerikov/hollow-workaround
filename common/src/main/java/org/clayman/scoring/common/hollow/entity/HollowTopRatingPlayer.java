@@ -1,6 +1,6 @@
 package org.clayman.scoring.common.hollow.entity;
 
-import lombok.*;
+import lombok.Getter;
 import org.clayman.scoring.common.cassandra.entity.TopRatingPlayer;
 
 import java.util.UUID;
